@@ -1,5 +1,5 @@
 {
-  "name": "SmartLink QR",
+  "name": "Qrytube",
   "description": "Smart QR Code generator with deep links for social media",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]

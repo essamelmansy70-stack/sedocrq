@@ -3,7 +3,7 @@ import QRCode from 'qrcode';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   Globe, Download, Copy, Check, Link as LinkIcon, 
-  Zap, Shield, Infinity as InfinityIcon, ArrowRight, ArrowLeft, Image as ImageIcon, ChevronDown, ChevronUp, Upload, X
+  Zap, Shield, Infinity as InfinityIcon, ArrowRight, ArrowLeft, Image as ImageIcon, ChevronDown, ChevronUp, Upload, X, QrCode
 } from 'lucide-react';
 import { translations, Language } from './translations';
 import { generateDeepLink } from './utils';
@@ -510,7 +510,7 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <button onClick={() => setView('home')} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <div className="bg-gradient-to-br from-blue-600 to-indigo-600 p-2.5 rounded-xl shadow-lg">
-              <Zap className="w-6 h-6 text-white" />
+              <QrCode className="w-6 h-6 text-white" />
             </div>
             <h1 className="text-2xl font-black tracking-tight text-slate-900">{t.title}</h1>
           </button>

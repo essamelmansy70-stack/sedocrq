@@ -2,7 +2,7 @@ export type Language = 'ar' | 'en';
 
 export const translations = {
   ar: {
-    title: 'الرابط الذكي ⚡',
+    title: 'Qrytube 💥',
     heroTitle: 'ضاعف متابعينك بـ ',
     heroTitleHighlight: 'كود QR سحري! 🚀',
     heroSubtitle: 'تجاوز المتصفح الداخلي المزعج. افتح تطبيقات المنصات الرسمية (يوتيوب، إنستغرام، تيك توك) مباشرة في هواتف متابعينك بضغطة واحدة!',
@@ -56,12 +56,12 @@ export const translations = {
       privacy: 'سياسة الخصوصية',
       terms: 'شروط الاستخدام',
       backHome: 'العودة للرئيسية 🏠',
-      privacyText: 'نحن نقدر خصوصيتك ونهتم بأمانك للحد الأقصى. منصة "الرابط الذكي" هي أداة مبنية لتعمل بشكل كامل على جانب العميل (Client-Side). هذا يعني أن جميع عمليات توليد الأكواد ومعالجة الروابط تتم داخل متصفحك الشخصي فقط. نحن لا نقوم بجمع، تخزين، أو مشاركة أي بيانات شخصية، عناوين IP، أو روابط تقوم بإدخالها مع أي خوادم خارجية تقريباً. تصفحك واستخدامك للأداة آمن، خاص، ومجهول تماماً.',
-      termsText: 'منصة "الرابط الذكي" مقدمة كخدمة مجانية بالكامل للمستخدمين لأغراض شرعية سواء للإستخدام الشخصي أو التجاري. باستخدامك لهذه الأداة، فإنك توافق التزاماً قاطعاً على عدم استخدامها في توليد روابط ضارة، خادعة، أو خبيثة. الأداة مقدمة "كما هي" دون أي ضمانات من أي نوع بشأن الجاهزية المطلقة أو مطابقة غرض معين. نحتفظ بالحق في إجراء تحديثات أو تعديلات على الخدمة في أي وقت.'
+      privacyText: 'نحن نقدر خصوصيتك ونهتم بأمانك للحد الأقصى. منصة "Qrytube" هي أداة مبنية لتعمل بشكل كامل على جانب العميل (Client-Side). هذا يعني أن جميع عمليات توليد الأكواد ومعالجة الروابط تتم داخل متصفحك الشخصي فقط. نحن لا نقوم بجمع، تخزين، أو مشاركة أي بيانات شخصية، عناوين IP، أو روابط تقوم بإدخالها مع أي خوادم خارجية تقريباً. تصفحك واستخدامك للأداة آمن، خاص، ومجهول تماماً.',
+      termsText: 'منصة "Qrytube" مقدمة كخدمة مجانية بالكامل للمستخدمين لأغراض شرعية سواء للإستخدام الشخصي أو التجاري. باستخدامك لهذه الأداة، فإنك توافق التزاماً قاطعاً على عدم استخدامها في توليد روابط ضارة، خادعة، أو خبيثة. الأداة مقدمة "كما هي" دون أي ضمانات من أي نوع بشأن الجاهزية المطلقة أو مطابقة غرض معين. نحتفظ بالحق في إجراء تحديثات أو تعديلات على الخدمة في أي وقت.'
     }
   },
   en: {
-    title: 'SmartLink ⚡',
+    title: 'Qrytube 💥',
     heroTitle: 'Explode your growth with a ',
     heroTitleHighlight: 'Magic QR! 🚀',
     heroSubtitle: 'Bypass annoying in-app browsers. Open native apps (YouTube, IG, TikTok) directly on your followers\' phones with just one tap!',
@@ -109,14 +109,14 @@ export const translations = {
       howHelpsTitle: 'How does this Magic Generator boost subscribers?',
       howHelpsDesc: 'Our engine automatically inspects the URL. For YouTube, it triggers subscription prompts (e.g., ?sub_confirmation=1). For Facebook, Instagram, or TikTok, it utilizes native app schemas. This ensures your audience lands straight within the app they already use, making subscribing immediate and effortless.',
       whyFreeTitle: 'Fast, Private, and 100% Free Forever',
-      whyFreeDesc: 'SmartLink is entirely serverless (client-side). Your data never leaves your device. Because we rely on the processing power of your browser, we can offer this enterprise-grade utility free of charge with unlimited usage forever to support creators.',
+      whyFreeDesc: 'Qrytube is entirely serverless (client-side). Your data never leaves your device. Because we rely on the processing power of your browser, we can offer this enterprise-grade utility free of charge with unlimited usage forever to support creators.',
     },
     legal: {
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
       backHome: 'Back to Home 🏠',
-      privacyText: 'We value your privacy and security. The SmartLink platform operates entirely client-side. This means all URL processing and QR generation happen purely within your browser. We do NOT collect, store, transmit, or share any personal data, IP addresses, or the links you generate. Your usage remains completely anonymous and locally processed.',
-      termsText: 'The SmartLink platform is provided as a 100% free utility for both personal and commercial use. By using this tool, you agree not to use it for malicious or deceptive links. The service is provided "as is," without any warranties of merchantability or fitness for a particular purpose. We reserve the right to modify or update the service at any time.'
+      privacyText: 'We value your privacy and security. The Qrytube platform operates entirely client-side. This means all URL processing and QR generation happen purely within your browser. We do NOT collect, store, transmit, or share any personal data, IP addresses, or the links you generate. Your usage remains completely anonymous and locally processed.',
+      termsText: 'The Qrytube platform is provided as a 100% free utility for both personal and commercial use. By using this tool, you agree not to use it for malicious or deceptive links. The service is provided "as is," without any warranties of merchantability or fitness for a particular purpose. We reserve the right to modify or update the service at any time.'
     }
   }
 };
