@@ -1,0 +1,122 @@
+export type Language = 'ar' | 'en';
+
+export const translations = {
+  ar: {
+    title: 'الرابط الذكي ⚡',
+    heroTitle: 'ضاعف متابعينك بـ ',
+    heroTitleHighlight: 'كود QR سحري! 🚀',
+    heroSubtitle: 'تجاوز المتصفح الداخلي المزعج. افتح تطبيقات المنصات الرسمية (يوتيوب، إنستغرام، تيك توك) مباشرة في هواتف متابعينك بضغطة واحدة!',
+    inputPlaceholder: '👉 الصق رابط حسابك أو قناتك هنا...',
+    generateBtn: '✨ توليد الـ QR السحري الآن ✨',
+    generating: 'جاري صناعة السحر... ⏳',
+    downloadPngBtn: 'تحميل كود QR 📥',
+    copyLinkBtn: 'نسخ الرابط الذكي 🔗',
+    copyImgBtn: 'نسخ صورة الكود 📋',
+    copiedBtn: 'تم النسخ بنجاح! 🎉',
+    customization: {
+      title: '🎨 تخصيص الكود الذكي',
+      colorDark: 'لون الكود (داكن)',
+      colorLight: 'لون الخلفية (فاتح)',
+      logoUpload: 'رفع شعار (اختياري)',
+      removeLogo: 'إزالة الشعار',
+    },
+    faq: {
+      title: '🤔 الأسئلة الشائعة (FAQ)',
+      q1: 'كيف تعمل الأداة لزيادة المتابعين؟',
+      a1: 'ببساطة، الروابط العادية تفتح في متصفح إنستغرام أو فيسبوك الداخلي وتطلب تسجيل دخول مجدداً مما يعيق الاشتراك والمتابعة. تقنيتنا تحول الرابط وتجبر هاتف الزائر على فتح التطبيق الرسمي مباشرة.',
+      q2: 'هل الأداة مجانية حقاً وهل هناك قيود؟',
+      a2: 'نعم! المنصة مجانية 100% للأبد ولا يوجد أي قيود على عدد الروابط أو الأكواد التي يمكنك توليدها، وهي مبنية لتعمل في متصفحك بشكل كامل دون سيرفرات خلفية.',
+      q3: 'هل تقومون بتخزين الروابط أو تتبع المستخدمين؟',
+      a3: 'إطلاقاً. لا نقوم بحفظ أي بيانات أو تتبع الروابط المدخلة، الخصوصية لدينا من أولوياتنا القصوى.',
+      q4: 'هل يمكنني تغيير ألوان الشعار والـ QR الخاص بي؟',
+      a4: 'بالتأكيد، لقد أضفنا ميزة التخصيص الكامل لألوان الكود واختيار شعار المنصة المفضلة (مثل يوتيوب، فيسبوك) ليوضع بمنتصف الـ QR كود لمندمجة تماماً مع هويتك.',
+    },
+    viral: {
+      trusted: '🌟 يثق بنا أكثر من 50,000 صانع محتوى حول العالم',
+      trending: '🔥 تريند: الأداة رقم #1 لنمو المتابعين في 2024',
+      share: 'شارك هذه الأداة الخطيرة مع أصدقائك 👇',
+    },
+    features: {
+      unlimitedTitle: '🚀 مجاني ولانهائي',
+      unlimitedDesc: 'لا اشتراكات، لا حدود! تعمل الأداة مباشرة من متصفحك مجاناً 100% للأبد.',
+      deepLinksTitle: '⚡ سحر الروابط العميقة',
+      deepLinksDesc: 'تقنيتنا الذكية تجبر الهاتف على فتح التطبيق الرسمي مباشرة لتسهيل المتابعة أو الاشتراك بضغطة زر.',
+      secureTitle: '🔒 خصوصية وأمان تام',
+      secureDesc: 'لا نرى ولا نخزن روابطك أو بياناتك أبدًا. العملية تتم محلياً في جهازك ومؤمنة تماماً.',
+    },
+    seo: {
+      whatIsTitle: 'ما هو الـ QR كود الذكي وميزة الروابط العميقة؟',
+      whatIsDesc: 'الرابط الذكي (Deep Link) هو تقنية متطورة مخصصة لصناع المحتوى واليوتيوبرز والمسوقين. عندما يقوم المستخدم العادي بمسح كود QR تقليدي لصفحة شخصية، غالباً ما يتم فتح الرابط داخل متصفح الإنترنت المدمج في التطبيق الذي استخدمه للمسح، مما يطلب منه تسجيل الدخول مرة أخرى للإعجاب أو المتابعة. أما الـ QR كود الذكي، فيقوم بفك شيفرة الرابط وتوجيه نظام تشغيل الهاتف لفتح التطبيق الرسمي مباشرة (مثل تطبيق يوتيوب)، مما يسهل عملية التفاعل ويزيد من معدلات التحويل للمشتركين بشكل ملحوظ.',
+      howHelpsTitle: 'كيف يساعد هذا المولد السحري في زيادة المتابعين؟',
+      howHelpsDesc: 'يقوم نظامنا بفحص الرابط المُدخل تلقائياً. إذا كان الرابط يخص يوتيوب، يتم إعادة صياغته لإضافة أكواد طلب الاشتراك التلقائي (?sub_confirmation=1). وإذا كان لـ Facebook أو Instagram أو TikTok، يتم استخدام الصيغة العميقة المخصصة للتطبيق. بنقرة واحدة، يجد المتابع نفسه داخل التطبيق الرسمي وتظهر أمامه نافذة المتابعة دون خطوات مملة، مما يضاعف من نمو حساباتك ويزيد من مشاهدات فيديوهاتك.',
+      whyFreeTitle: 'سريع، آمن، ومجاني بالكامل مدى الحياة',
+      whyFreeDesc: 'تم تصميم المنصة لتعمل بشكل كامل في متصفحك الشخصي دون الحاجة لسيرفرات خلفية مرهقة. هذا يضمن أعلى درجات الخصوصية لمعلوماتك، بالاضافة لسرعة فائقة. ونتيجة لتخفيض تكاليف الخوادم للصفر، نحن فخورون لتقديم هذه الخدمة الاحترافية مجاناً 100% بمرات استخدام غير محدودة لدعم صناع المحتوى.',
+    },
+    legal: {
+      privacy: 'سياسة الخصوصية',
+      terms: 'شروط الاستخدام',
+      backHome: 'العودة للرئيسية 🏠',
+      privacyText: 'نحن نقدر خصوصيتك ونهتم بأمانك للحد الأقصى. منصة "الرابط الذكي" هي أداة مبنية لتعمل بشكل كامل على جانب العميل (Client-Side). هذا يعني أن جميع عمليات توليد الأكواد ومعالجة الروابط تتم داخل متصفحك الشخصي فقط. نحن لا نقوم بجمع، تخزين، أو مشاركة أي بيانات شخصية، عناوين IP، أو روابط تقوم بإدخالها مع أي خوادم خارجية تقريباً. تصفحك واستخدامك للأداة آمن، خاص، ومجهول تماماً.',
+      termsText: 'منصة "الرابط الذكي" مقدمة كخدمة مجانية بالكامل للمستخدمين لأغراض شرعية سواء للإستخدام الشخصي أو التجاري. باستخدامك لهذه الأداة، فإنك توافق التزاماً قاطعاً على عدم استخدامها في توليد روابط ضارة، خادعة، أو خبيثة. الأداة مقدمة "كما هي" دون أي ضمانات من أي نوع بشأن الجاهزية المطلقة أو مطابقة غرض معين. نحتفظ بالحق في إجراء تحديثات أو تعديلات على الخدمة في أي وقت.'
+    }
+  },
+  en: {
+    title: 'SmartLink ⚡',
+    heroTitle: 'Explode your growth with a ',
+    heroTitleHighlight: 'Magic QR! 🚀',
+    heroSubtitle: 'Bypass annoying in-app browsers. Open native apps (YouTube, IG, TikTok) directly on your followers\' phones with just one tap!',
+    inputPlaceholder: '👉 Paste your profile or channel link here...',
+    generateBtn: '✨ Generate Magic QR Now ✨',
+    generating: 'Doing magic... ⏳',
+    downloadPngBtn: 'Download QR 📥',
+    copyLinkBtn: 'Copy Smart Link 🔗',
+    copyImgBtn: 'Copy QR Image 📋',
+    copiedBtn: 'Copied! 🎉',
+    customization: {
+      title: '🎨 Customize QR Code',
+      colorDark: 'Code Color (Dark)',
+      colorLight: 'Background Color (Light)',
+      logoUpload: 'Upload Logo (Optional)',
+      removeLogo: 'Remove',
+    },
+    faq: {
+      title: '🤔 Frequently Asked Questions (FAQ)',
+      q1: 'How does it help boost followers?',
+      a1: 'Regular links open in the limited in-app browsers like Instagram\'s or Facebook\'s, which ask users to log in again. Our deep links bypass this and open the actual app directly, removing roadblocks to subscribing.',
+      q2: 'Is it really free? Any limits?',
+      a2: 'Yes! It is 100% free and unlimited forever. Our tool runs completely entirely inside your browser (Client-Side), meaning there are no backend costs to pass on to you.',
+      q3: 'Do you track links or store data?',
+      a3: 'No! We absolutely do not track, log, or store any of your data. Privacy is our top priority.',
+      q4: 'Can I customize the QR Code appearance?',
+      a4: 'Yes, you can fully customize the colors (Foreground and Background) and place platform logos right in the center of the QR code to fit your brand identity seamlessly.',
+    },
+    viral: {
+      trusted: '🌟 Trusted by 50,000+ creators globally',
+      trending: '🔥 Trending: #1 tool for audience growth in 2024',
+      share: 'Share this growth hack with friends 👇',
+    },
+    features: {
+      unlimitedTitle: '🚀 100% Free & Unlimited',
+      unlimitedDesc: 'No subscriptions, no limits! Runs entirely in your browser. Totally free forever.',
+      deepLinksTitle: '⚡ Deep Linking Magic',
+      deepLinksDesc: 'Our smart tech forces phones to instantly open the native app, skipping the login friction.',
+      secureTitle: '🔒 Maximum Privacy',
+      secureDesc: 'We never see or store your links. Everything stays securely on your own device.',
+    },
+    seo: {
+      whatIsTitle: 'What is a Smart QR Code and Deep Linking?',
+      whatIsDesc: 'A deep link is an advanced URL technology built for content creators, YouTubers, and marketers. When a user scans a traditional QR code, it often opens in an internal web browser that requires them to log in again to engage. A Smart QR Code resolves this by forcing the operating system to launch the official native app (like YouTube) directly, drastically increasing conversion rates.',
+      howHelpsTitle: 'How does this Magic Generator boost subscribers?',
+      howHelpsDesc: 'Our engine automatically inspects the URL. For YouTube, it triggers subscription prompts (e.g., ?sub_confirmation=1). For Facebook, Instagram, or TikTok, it utilizes native app schemas. This ensures your audience lands straight within the app they already use, making subscribing immediate and effortless.',
+      whyFreeTitle: 'Fast, Private, and 100% Free Forever',
+      whyFreeDesc: 'SmartLink is entirely serverless (client-side). Your data never leaves your device. Because we rely on the processing power of your browser, we can offer this enterprise-grade utility free of charge with unlimited usage forever to support creators.',
+    },
+    legal: {
+      privacy: 'Privacy Policy',
+      terms: 'Terms of Service',
+      backHome: 'Back to Home 🏠',
+      privacyText: 'We value your privacy and security. The SmartLink platform operates entirely client-side. This means all URL processing and QR generation happen purely within your browser. We do NOT collect, store, transmit, or share any personal data, IP addresses, or the links you generate. Your usage remains completely anonymous and locally processed.',
+      termsText: 'The SmartLink platform is provided as a 100% free utility for both personal and commercial use. By using this tool, you agree not to use it for malicious or deceptive links. The service is provided "as is," without any warranties of merchantability or fitness for a particular purpose. We reserve the right to modify or update the service at any time.'
+    }
+  }
+};
