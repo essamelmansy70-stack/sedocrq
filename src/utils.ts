@@ -7,7 +7,7 @@ export function generateDeepLink(originalUrl: string): string {
     
     const urlObj = new URL(url);
     const host = urlObj.hostname.toLowerCase().replace(/^www\./, '');
-    let path = urlObj.pathname;
+    const path = urlObj.pathname;
     
     // YouTube
     if (host === 'youtube.com' || host === 'youtu.be') {
@@ -15,38 +15,30 @@ export function generateDeepLink(originalUrl: string): string {
       if (path.includes('/channel/') || path.includes('/c/') || path.includes('/@') || path.includes('/user/')) {
         urlObj.searchParams.set('sub_confirmation', '1');
       }
-      
-      // Intent scheme for Android, standard for iOS (iOS Universal Links handle standard HTTPS best)
-      // Since we format it specifically for mobile apps as requested:
-      return `intent://${urlObj.host}${urlObj.pathname}${urlObj.search}#Intent;package=com.google.android.youtube;scheme=https;end`;
+      return urlObj.href;
     }
     
     // Instagram
     if (host === 'instagram.com') {
       const parts = path.split('/').filter(Boolean);
-      if (parts.length > 0 && !['p', 'reel', 'tv', 'explore'].includes(parts[0])) {
-        // It's a profile
+      if (parts.length > 0 && !['p', 'reel', 'tv', 'explore', '_u'].includes(parts[0])) {
+        // Formulate/_u/username structure which forces native app opening on both iOS and Android
         const username = parts[0];
-        // Using instagram:// scheme
-        return `instagram://user?username=${username}`;
+        return `https://www.instagram.com/_u/${username}${urlObj.search}`;
       }
-      // For posts/reels
-      return `intent://${urlObj.host}${urlObj.pathname}#Intent;package=com.instagram.android;scheme=https;end`;
+      return urlObj.href;
     }
     
     // Facebook
     if (host === 'facebook.com' || host === 'fb.com') {
-      // A common way to deep link profiles on FB
-      return `fb://facewebmodal/f?href=${urlObj.href}`;
+      // Standard FB HTTPS url natively triggers App Links / Universal Links in iOS & Android
+      return urlObj.href;
     }
     
     // TikTok
     if (host === 'tiktok.com') {
-      const parts = path.split('/').filter(Boolean);
-      if (parts.length > 0 && parts[0].startsWith('@')) {
-        // Return standard url as tiktok's universal links are very robust, or we can use intent.
-        return `intent://${urlObj.host}${urlObj.pathname}#Intent;package=com.zhiliaoapp.musically;scheme=https;end`;
-      }
+      // Standard TikTok HTTPS url naturally triggers native TikTok app
+      return urlObj.href;
     }
     
     // Default fallback to standard URL
