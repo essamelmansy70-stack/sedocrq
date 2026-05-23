@@ -1193,28 +1193,14 @@ export default function App() {
             <h1 className="text-2xl font-black tracking-tight text-slate-900">{t.title}</h1>
           </button>
           
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => setView('contact')}
-              className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full font-bold transition-all shadow-sm active:scale-95 text-xs sm:text-sm ${
-                view === 'contact'
-                ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md'
-                : 'border-2 border-slate-200 bg-white text-slate-700 hover:border-indigo-300 hover:text-indigo-600'
-              }`}
-            >
-              <Mail className="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
-              <span>{t.contact.title}</span>
-            </button>
-
-            <button
-              onClick={() => setLang(lang === 'ar' ? 'en' : 'ar')}
-              aria-label={lang === 'ar' ? "تغيير لغة الموقع إلى الإنجليزية" : "Change website language to Arabic"}
-              className="flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full border-2 border-slate-200 bg-white hover:border-indigo-300 hover:text-indigo-600 transition-all font-bold shadow-sm hover:shadow active:scale-95 text-xs sm:text-sm"
-            >
-              <Globe className="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
-              <span>{lang === 'ar' ? 'English' : 'العربية'}</span>
-            </button>
-          </div>
+          <button
+            onClick={() => setLang(lang === 'ar' ? 'en' : 'ar')}
+            aria-label={lang === 'ar' ? "تغيير لغة الموقع إلى الإنجليزية" : "Change website language to Arabic"}
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-slate-200 bg-white hover:border-indigo-300 hover:text-indigo-600 transition-all font-bold shadow-sm hover:shadow active:scale-95"
+          >
+            <Globe className="w-5 h-5" aria-hidden="true" />
+            <span>{lang === 'ar' ? 'English' : 'العربية'}</span>
+          </button>
         </div>
       </header>
 
