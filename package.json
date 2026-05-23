@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build",
+    "build": "vite build && node -e \"import('fs').then(f => { f.copyFileSync('dist/index.html', 'SmartLink-QR.html'); f.copyFileSync('dist/index.html', 'Qrytube.html'); f.copyFileSync('dist/index.html', 'index.html'); console.log('Updated single-file exports successfully.'); })\"",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit"
