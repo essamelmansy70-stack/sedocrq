@@ -44,7 +44,7 @@ export default function App() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   
   // Navigation State
-  const [view, setView] = useState<'home' | 'privacy' | 'terms' | 'contact'>('home');
+  const [view, setView] = useState<'home' | 'privacy' | 'terms' | 'contact' | 'how-it-works'>('home');
 
   // Contact State
   const [contactName, setContactName] = useState('');
@@ -325,6 +325,102 @@ export default function App() {
     setContactSubject('');
     setContactMessage('');
     setIsContactSubmitted(false);
+  };
+  const renderHowItWorksView = () => {
+    const thw = t.howItWorks;
+    if (!thw) return null;
+
+    return (
+      <motion.div 
+        key="how-it-works-view"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.95 }}
+        className="flex-1 w-full max-w-5xl mx-auto px-4 py-16"
+      >
+        <button 
+          onClick={() => setView('home')}
+          aria-label={t.legal.backHome}
+          className="mb-8 flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-slate-200 hover:bg-slate-50 transition-colors shadow-sm font-semibold text-slate-700 hover:scale-105 active:scale-95 duration-200"
+        >
+          {lang === 'ar' ? <ArrowRight className="w-5 h-5" aria-hidden="true" /> : <ArrowLeft className="w-5 h-5" aria-hidden="true" />}
+          {t.legal.backHome}
+        </button>
+
+        <div className="bg-white rounded-[2rem] shadow-xl border border-slate-100 p-8 md:p-12 relative overflow-hidden">
+          {/* Glowing Ambient background bubbles */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-indigo-400 via-purple-300 to-transparent rounded-full blur-3xl opacity-10 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-blue-300 via-cyan-200 to-transparent rounded-full blur-3xl opacity-10 pointer-events-none" />
+
+          {/* Title Area */}
+          <div className="text-center mb-12 relative z-10">
+            <h1 className="text-3xl md:text-5xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
+              {thw.title}
+            </h1>
+            <p className="text-lg md:text-xl text-slate-600 font-semibold max-w-3xl mx-auto leading-relaxed">
+              {thw.subTitle}
+            </p>
+          </div>
+
+          {/* Staggered Graphic 3-Step Process Cards */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16 relative z-10">
+            {/* Step 1 */}
+            <motion.div 
+              whileHover={{ y: -8 }}
+              className="bg-slate-50/50 border border-slate-100 rounded-3xl p-6 md:p-8 flex flex-col items-center text-center shadow-sm relative overflow-hidden"
+            >
+              <div className="w-16 h-16 bg-gradient-to-tr from-indigo-500 to-violet-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg shadow-indigo-200 mb-6 shrink-0">
+                1
+              </div>
+              <h3 className="text-xl font-extrabold text-slate-900 mb-4">{thw.step1Title}</h3>
+              <p className="text-slate-600 text-base leading-relaxed font-semibold">{thw.step1Desc}</p>
+            </motion.div>
+
+            {/* Step 2 */}
+            <motion.div 
+              whileHover={{ y: -8 }}
+              className="bg-slate-50/50 border border-slate-100 rounded-3xl p-6 md:p-8 flex flex-col items-center text-center shadow-sm relative overflow-hidden"
+            >
+              <div className="w-16 h-16 bg-gradient-to-tr from-fuchsia-500 to-purple-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg shadow-fuchsia-200 mb-6 shrink-0">
+                2
+              </div>
+              <h3 className="text-xl font-extrabold text-slate-900 mb-4">{thw.step2Title}</h3>
+              <p className="text-slate-600 text-base leading-relaxed font-semibold">{thw.step2Desc}</p>
+            </motion.div>
+
+            {/* Step 3 */}
+            <motion.div 
+              whileHover={{ y: -8 }}
+              className="bg-slate-50/50 border border-slate-100 rounded-3xl p-6 md:p-8 flex flex-col items-center text-center shadow-sm relative overflow-hidden"
+            >
+              <div className="w-16 h-16 bg-gradient-to-tr from-amber-500 to-orange-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg shadow-amber-200 mb-6 shrink-0">
+                3
+              </div>
+              <h3 className="text-xl font-extrabold text-slate-900 mb-4">{thw.step3Title}</h3>
+              <p className="text-slate-600 text-base leading-relaxed font-semibold">{thw.step3Desc}</p>
+            </motion.div>
+          </div>
+
+          {/* Deep Mechanism Detail */}
+          <div className="bg-gradient-to-br from-indigo-900 via-indigo-950 to-slate-950 rounded-3xl text-white p-8 md:p-12 border border-indigo-950/20 shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full blur-[80px] opacity-25 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-purple-500 to-fuchsia-600 rounded-full blur-[80px] opacity-25 pointer-events-none" />
+            
+            <div className="relative z-10">
+              <div className="flex items-center gap-3.5 mb-6">
+                <div className="bg-white/10 p-3 rounded-2xl text-yellow-300 shadow-inner">
+                  <Zap className="w-6 h-6 animate-pulse" aria-hidden="true" />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-black">{thw.techTitle}</h2>
+              </div>
+              <p className="text-indigo-150 text-base md:text-lg leading-relaxed font-medium">
+                {thw.techDesc}
+              </p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    );
   };
 
   // Render Functions
@@ -1223,6 +1319,18 @@ export default function App() {
             </div>
             <h1 className="text-2xl font-black tracking-tight text-slate-900">{t.title}</h1>
           </button>
+
+          <div className="hidden md:flex items-center gap-8 text-base font-bold text-slate-600">
+            <button onClick={() => setView('home')} className={`hover:text-indigo-600 transition-colors ${view === 'home' ? 'text-indigo-600 border-b-2 border-indigo-600 pb-0.5 mt-1' : ''}`}>
+              {lang === 'ar' ? 'الرئيسية' : 'Home'}
+            </button>
+            <button onClick={() => setView('how-it-works')} className={`hover:text-indigo-600 transition-colors ${view === 'how-it-works' ? 'text-indigo-600 border-b-2 border-indigo-600 pb-0.5 mt-1' : ''}`}>
+              {lang === 'ar' ? 'كيف يعمل؟' : 'How it works?'}
+            </button>
+            <button onClick={() => setView('contact')} className={`hover:text-indigo-600 transition-colors ${view === 'contact' ? 'text-indigo-600 border-b-2 border-indigo-600 pb-0.5 mt-1' : ''}`}>
+              {lang === 'ar' ? 'اتصل بنا' : 'Contact us'}
+            </button>
+          </div>
           
           <button
             onClick={() => setLang(lang === 'ar' ? 'en' : 'ar')}
@@ -1240,12 +1348,20 @@ export default function App() {
         {view === 'home' && renderHomeView()}
         {(view === 'privacy' || view === 'terms') && renderLegalView()}
         {view === 'contact' && renderContactView()}
+        {view === 'how-it-works' && renderHowItWorksView()}
       </AnimatePresence>
 
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-300 py-12 mt-auto">
         <div className="max-w-6xl mx-auto px-4 text-center flex flex-col items-center gap-6">
           <div className="flex flex-wrap justify-center gap-4 text-sm font-bold">
+            <button 
+              onClick={() => setView('how-it-works')} 
+              className={`hover:text-blue-400 text-slate-100 transition-colors bg-slate-800 px-5 py-2.5 rounded-full hover:bg-slate-750 ${view === 'how-it-works' ? 'ring-2 ring-indigo-500' : ''}`}
+              aria-label={lang === 'ar' ? 'كيف يعمل؟' : 'How it works?'}
+            >
+              {lang === 'ar' ? 'كيف يعمل؟' : 'How it works?'}
+            </button>
             <button 
               onClick={() => setView('privacy')} 
               className="hover:text-blue-400 text-slate-100 transition-colors bg-slate-800 px-5 py-2.5 rounded-full hover:bg-slate-750"

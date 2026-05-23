@@ -107,6 +107,18 @@ export const translations = {
       activeUrl: 'الرابط الموجه',
       actions: 'إجراءات الكود',
       noScansYet: 'ابدأ بتوليد كود QR ذكي ومسحه لتظهر لك الإحصائيات هنا!'
+    },
+    howItWorks: {
+      title: 'كيف يعمل الـ QR الذكي؟ 🤔',
+      subTitle: 'تعلّم كيف تتخطى أداة Qrytube قيود المتصفح المدمج لتضاعف تفاعل جمهورك بـ 3 خطوات بسيطة!',
+      step1Title: '1️⃣ الصق رابط قناتك أو حسابك',
+      step1Desc: 'ضع الرابط المباشر لقناتك على اليوتيوب، أو حسابك على إنستغرام، تيك توك، فيسبوك وغيرها في حقل الإدخال بالصفحة الرئيسية.',
+      step2Title: '2️⃣ خصص الهوية بلمستك الخاصة',
+      step2Desc: 'اختر ألوان الـ QR كود بدقة، وارفع شعار علامتك المخصصة (اختياري) ليوضع بأناقة بمنتصف الكود، ثم اضغط توليد.',
+      step3Title: '3️⃣ انشر كود الـ QR أو اللينك الذكي',
+      step3Desc: 'عندما يمسح شخص الكود أو يضغط على اللينك، يقوم نظامنا الذكي بفتح التطبيق الرسمي للهاتف تلقائياً لتسهيل الاشتراك بضغطة واحدة!',
+      techTitle: '⚡ تكنولوجيا الروابط العميقة (Deep Linking) بالخلفية',
+      techDesc: 'أكبر عائق يواجه صناع المحتوى لزيادة متابعيهم اليوم هو المتصفح المدمج (In-App Browser) لتطبيقات التواصل مثل فيسبوك وإنستغرام. عندما يفتح متابعك رابطاً عادياً، يغلق بوجهه التطبيق الرسمي ويطلب منه متصفح الويب تسجيل دخوله مجدداً لكتابة تعليق أو ضغط زر متابعة؛ وهي عملية معقدة يهرب منها 95٪ من الزوار. مع تقنيتنا لفتح الروابط العميقة، نقوم بإجراء تحويلة ذكية تفك شفرة التطبيق وتجبر هاتف الزائر محلياً للذهاب للتطبيق الرسمي مباشرة بنسبة نجاح فائقة.'
     }
   },
   en: {
@@ -215,6 +227,18 @@ export const translations = {
       activeUrl: 'Destination URL',
       actions: 'QR Options',
       noScansYet: 'Generate a trackable Smart QR code and scan/test it to view beautiful graphs and lists here!'
+    },
+    howItWorks: {
+      title: 'How does Smart QR work? 🤔',
+      subTitle: 'Learn how Qrytube bypasses annoying in-app browsers to multiply your followers in 3 simple steps!',
+      step1Title: '1️⃣ Paste your Profile or Channel URL',
+      step1Desc: 'Simply drop your YouTube, Instagram, TikTok, or Facebook profile link into the main input field.',
+      step2Title: '2️⃣ Customize with Your Brand Identity',
+      step2Desc: 'Choose colors that represent your style, optionally upload a custom logo for the center, and tap the generate button.',
+      step3Title: '3️⃣ Share & Watch Your Audience Explode',
+      step3Desc: 'When anyone scans the QR or taps the smart link, our system forces their phone to launch official official apps instantly fully logged in!',
+      techTitle: '⚡ Deep Linking Engine Technology Behind The Scenes',
+      techDesc: 'The primary bottleneck to content creator growth today is the In-App Webview Browser. Platforms like Meta or TikTok open basic built-in browsers when users click direct links. These isolated browsers lack cookies and previous login sessions, forcing your fans to re-key passwords just to leave a like or subscribe. Our zero-latency Deep Linking protocol triggers a direct handshake with the OS shell, routing the user to official applications on autopilot.'
     }
   }
 };
