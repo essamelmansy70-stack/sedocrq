@@ -1,0 +1,96 @@
+<svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for Gradients, Shadows, and Clips -->
+  <defs>
+    <!-- Main Outer Gradient -->
+    <linearGradient id="crestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="30%" stop-color="#4F46E5" />
+      <stop offset="70%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#DB2777" />
+    </linearGradient>
+    
+    <!-- Accent Spark/Blast Gradient -->
+    <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE7F3" />
+      <stop offset="50%" stop-color="#F472B6" />
+      <stop offset="100%" stop-color="#F43F5E" />
+    </linearGradient>
+
+    <!-- Hot Gold/Orange Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="50%" stop-color="#F97316" />
+      <stop offset="100%" stop-color="#EA580C" />
+    </linearGradient>
+
+    <!-- Clean Premium Glow Filter -->
+    <filter id="glowEffect" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#4F46E5" flood-opacity="0.3" />
+    </filter>
+    <filter id="intenseGlow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Main Background Container (Premium Squircle Fluid Shape) -->
+  <rect x="32" y="32" width="448" height="448" rx="112" fill="url(#crestGrad)" filter="url(#glowEffect)" />
+
+  <!-- Subtle Inner Ring/Stroke border for modern luxury hardware look -->
+  <rect x="36" y="36" width="440" height="440" rx="108" fill="none" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="6" />
+
+  <!-- Subtle geometric background mesh vector representing data/links flow -->
+  <path d="M 60,180 H 452 M 60,332 H 452 M 180,60 V 452 M 332,60 V 452" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="4" />
+
+  <!-- 1. TOP-LEFT FINDER PATTERN (Modern Rounded QR Tech Corner) -->
+  <g transform="translate(90, 90)">
+    <rect x="0" y="0" width="84" height="84" rx="20" fill="#FFFFFF" />
+    <rect x="14" y="14" width="56" height="56" rx="12" fill="url(#crestGrad)" />
+    <rect x="25" y="25" width="34" height="34" rx="6" fill="#FFFFFF" />
+  </g>
+
+  <!-- 2. TOP-RIGHT FINDER PATTERN (Modern Rounded QR Tech Corner) -->
+  <g transform="translate(338, 90)">
+    <rect x="0" y="0" width="84" height="84" rx="20" fill="#FFFFFF" />
+    <rect x="14" y="14" width="56" height="56" rx="12" fill="url(#crestGrad)" />
+    <rect x="25" y="25" width="34" height="34" rx="6" fill="#FFFFFF" />
+  </g>
+
+  <!-- 3. BOTTOM-LEFT FINDER PATTERN (Modern Rounded QR Tech Corner) -->
+  <g transform="translate(90, 338)">
+    <rect x="0" y="0" width="84" height="84" rx="20" fill="#FFFFFF" />
+    <rect x="14" y="14" width="56" height="56" rx="12" fill="url(#crestGrad)" />
+    <rect x="25" y="25" width="34" height="34" rx="6" fill="#FFFFFF" />
+  </g>
+
+  <!-- 4. BOTTOM-RIGHT DESIGN ELEMENT - Tech Matrix Blocks -->
+  <g transform="translate(338, 338)">
+    <rect x="0" y="0" width="30" height="30" rx="8" fill="#FFFFFF" />
+    <rect x="54" y="0" width="30" height="30" rx="8" fill="#FFFFFF" />
+    <rect x="0" y="54" width="30" height="30" rx="8" fill="#FFFFFF" />
+    <rect x="54" y="54" width="30" height="30" rx="8" fill="url(#sparkGrad)" />
+    
+    <!-- Connected QR cluster block -->
+    <path d="M 12,12 H 42 V 42 H 12 Z" fill="#FFFFFF" opacity="0.8" />
+  </g>
+
+  <!-- 5. CENTER BRAND ICON: Glowing Youtube/Media Play Emblem with "Boom 💥" lightning blast outline -->
+  <g transform="translate(256, 256)" filter="url(#intenseGlow)">
+    <!-- Base premium dark transparent disk backing for extra contrast -->
+    <circle cx="0" cy="0" r="76" fill="#0F172A" fill-opacity="0.8" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="4" />
+
+    <!-- Pure stylized Play Triangle in center (Forward Motion) -->
+    <path d="M -18,-32 L 32,0 L -18,32 Z" fill="url(#goldGrad)" />
+    
+    <!-- Surrounding Dynamic Sparks / Explosion vector lines reminiscent of '💥' -->
+    <path d="M -50,-50 L -35,-35" stroke="url(#goldGrad)" stroke-width="5" stroke-linecap="round" />
+    <path d="M 50,-50 L 35,-35" stroke="url(#goldGrad)" stroke-width="5" stroke-linecap="round" />
+    <path d="M 50,50 L 35,35" stroke="url(#goldGrad)" stroke-width="5" stroke-linecap="round" />
+    <path d="M -50,50 L -35,35" stroke="url(#goldGrad)" stroke-width="5" stroke-linecap="round" />
+    
+    <path d="M 0,-62 V -46" stroke="url(#sparkGrad)" stroke-width="5" stroke-linecap="round" />
+    <path d="M 62,0 H 46" stroke="url(#sparkGrad)" stroke-width="5" stroke-linecap="round" />
+    <path d="M 0,62 V 46" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" />
+    <path d="M -62,0 H -46" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" />
+  </g>
+</svg>
