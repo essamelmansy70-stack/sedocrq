@@ -559,6 +559,37 @@ export default function App() {
 
           {/* Right/Bottom: Alternative Fast Support Side Panel */}
           <div className="lg:col-span-12 xl:col-span-5 flex flex-col gap-6">
+            {/* Founder Profile Card */}
+            <div className="bg-gradient-to-br from-indigo-900 via-indigo-950 to-slate-950 rounded-[2rem] text-white p-6 md:p-8 shadow-xl border border-indigo-950/20 relative overflow-hidden flex flex-col sm:flex-row items-center gap-6 group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500 to-fuchsia-500 rounded-full blur-3xl opacity-10 pointer-events-none" />
+              
+              {/* Profile Image with Ring Effect */}
+              <div className="relative shrink-0 flex justify-center">
+                <div className="absolute inset-0 bg-gradient-to-tr from-cyan-400 via-indigo-500 to-fuchsia-500 rounded-2xl blur opacity-40 group-hover:opacity-75 transition-opacity duration-500 animate-pulse animate-duration-[2s]" />
+                <img 
+                  src="/essam_profile.png" 
+                  alt="Essam Elmansy" 
+                  className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border-2 border-white/20 relative z-10 shadow-lg object-top hover:scale-105 transition-transform duration-300"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+
+              {/* Bio Details */}
+              <div className="flex-1 text-center sm:text-start relative z-10">
+                <span className="inline-block bg-indigo-500/30 text-indigo-300 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-indigo-500/20 mb-2">
+                  {lang === 'ar' ? 'مطور ومؤسس المنصة 💻' : 'Platform Founder & Dev 💻'}
+                </span>
+                <h3 className="text-xl font-extrabold text-white tracking-tight">
+                  {lang === 'ar' ? 'عصام المنسي' : 'Essam Elmansy'}
+                </h3>
+                <p className="text-indigo-200 text-xs font-semibold leading-relaxed mt-1.5">
+                  {lang === 'ar' 
+                    ? 'أهلاً بك! أنا مطور منصة Qrytube. قمت ببنائها لتسهيل وصول الجمهور لحسابات صناع المحتوى وتخطي قيود التصفح المزعجة. يسعدني جداً تواصلك المباشر وعبر أي من قنوات الدعم المتاحة بالأسفل.' 
+                    : 'Welcome! I am the creator of Qrytube. I built this tool to resolve native app opening issues and help creators grow frictionless. Feel free to contact me via the direct support channels.'}
+                </p>
+              </div>
+            </div>
+
             <div className="bg-gradient-to-br from-indigo-900 to-indigo-950 rounded-[2rem] text-white p-8 md:p-10 shadow-xl border border-indigo-950/20 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500 to-fuchsia-500 rounded-full blur-3xl opacity-10 pointer-events-none" />
               
